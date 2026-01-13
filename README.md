@@ -31,4 +31,4 @@ This is a simple React portfolio website built using React, styled-components, a
 
 ## Give it a star ⭐
 
-thank you for checking out my portfolio website. 🙏
+thank you for checking out my portfolio website. 
