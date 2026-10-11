@@ -1,9 +1,9 @@
-import { Briefcase, Code, User } from 'lucide-react'
+import { Briefcase, Code, User, GraduationCap } from 'lucide-react'
 import { experience } from '../data/portfolioData'
 import Reveal from '../components/Reveal'
 import SectionHeading from '../components/SectionHeading'
 
-const iconMap = { work: Briefcase, freelance: Code, personal: User }
+const iconMap = { work: Briefcase, freelance: Code, personal: User, training: GraduationCap }
 
 export default function Experience() {
   return (
@@ -23,7 +23,7 @@ export default function Experience() {
               const Icon = iconMap[item.type] || Briefcase
               const isEven = i % 2 === 0
               return (
-                <Reveal key={item.role} delay={i * 0.1}>
+                <Reveal key={item.company + item.role} delay={i * 0.1}>
                   <div className={`relative flex md:items-center gap-6 ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
                     <div className="absolute left-0 md:left-1/2 md:-translate-x-1/2 z-10">
                       <div className="w-10 h-10 rounded-full glass-card flex items-center justify-center shadow-glow">

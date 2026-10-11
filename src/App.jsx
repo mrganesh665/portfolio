@@ -10,14 +10,15 @@ import Hero from './sections/Hero'
 import About from './sections/About'
 import Skills from './sections/Skills'
 import Projects from './sections/Projects'
+import TechMarquee from './sections/TechMarquee'
 import Experience from './sections/Experience'
+import Certifications from './sections/Certifications'
 import Services from './sections/Services'
 import WhyHireMe from './sections/WhyHireMe'
-import TechMarquee from './sections/TechMarquee'
 import Testimonials from './sections/Testimonials'
 import GithubActivity from './sections/GithubActivity'
-import Contact from './sections/Contact'
 import FAQ from './sections/FAQ'
+import Contact from './sections/Contact'
 
 function HomePage() {
   return (
@@ -28,6 +29,7 @@ function HomePage() {
       <Projects />
       <TechMarquee />
       <Experience />
+      <Certifications />
       <Services />
       <WhyHireMe />
       <Testimonials />

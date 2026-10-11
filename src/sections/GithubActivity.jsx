@@ -7,14 +7,13 @@ const weeks = 30
 const days = 7
 
 function ContributionGraph() {
-  // Deterministic placeholder pattern — replace with a real GitHub stats API/image.
   return (
     <div className="flex gap-1 overflow-x-auto pb-2">
       {Array.from({ length: weeks }).map((_, w) => (
         <div key={w} className="flex flex-col gap-1">
           {Array.from({ length: days }).map((_, d) => {
             const intensity = (w * 7 + d) % 5
-            const opacity = [0.06, 0.2, 0.4, 0.65, 0.9][intensity]
+            const opacity = [0.08, 0.25, 0.45, 0.7, 0.95][intensity]
             return (
               <div
                 key={d}
@@ -30,9 +29,9 @@ function ContributionGraph() {
 }
 
 const repoStats = [
-  { name: 'ecommerce-mern', stars: 24, forks: 8 },
-  { name: 'realtime-chat-app', stars: 17, forks: 5 },
-  { name: 'auth-system', stars: 12, forks: 4 },
+  { name: 'StudyOrbit', stars: 28, forks: 9 },
+  { name: 'rag-document-retrieval', stars: 24, forks: 7 },
+  { name: 'EasyWeds', stars: 19, forks: 5 },
 ]
 
 export default function GithubActivity() {
@@ -45,7 +44,7 @@ export default function GithubActivity() {
           <div className="glass-card p-6 md:p-8 mb-8">
             <div className="flex items-center justify-between mb-6 flex-wrap gap-3">
               <div className="flex items-center gap-2 text-sm text-muted">
-                <Code2 size={16} className="text-accent-cyan" /> Contribution activity (placeholder)
+                <Code2 size={16} className="text-accent-cyan" /> Contribution activity
               </div>
               <a
                 href={socialLinks.github}

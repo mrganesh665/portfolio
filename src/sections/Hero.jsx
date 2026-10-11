@@ -2,21 +2,19 @@ import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { ArrowRight, Download, Sparkles } from 'lucide-react'
 
-// ----- OLD IMPORTS (React, Node, Git) -----
-import { FaReact, FaNodeJs, FaGitAlt, FaPython } from 'react-icons/fa'
-
-// ----- NEW IMPORTS (Saare naye icons ke liye) -----
-import { 
-  SiMongodb, 
-  SiExpress, 
+import { FaReact, FaNodeJs, FaGitAlt } from 'react-icons/fa'
+import {
+  SiMongodb,
+  SiExpress,
   SiTailwindcss,
-  SiMysql,           // MySQL
-  SiVuedotjs,        // Vue.js
-  SiJavascript,      // JavaScript
-  SiRedis,           // Redis (System Design)
-  SiSocketdotio,     // Socket.IO
-  SiCapacitor,       // Capacitor (Mobile)
+  SiMysql,
+  SiJavascript,
+  SiTypescript,
+  SiRedux,
+  SiNextdotjs,
+  SiMui,
 } from 'react-icons/si'
+import { TbBrandOpenai } from 'react-icons/tb'
 
 import { personalInfo, stats } from '../data/portfolioData'
 import useCountUp from '../hooks/useCountUp'
@@ -67,23 +65,20 @@ function StatCard({ stat, index }) {
   )
 }
 
-// ----- ORBIT ICONS (Aapka updated array - perfect hai) -----
 const orbitIcons = [
-  // Core Frontend/Backend
   { Icon: FaReact, color: '#61DAFB' },
+  { Icon: SiTypescript, color: '#3178C6' },
   { Icon: FaNodeJs, color: '#8CC84B' },
-  { Icon: SiMongodb, color: '#47A248' },
   { Icon: SiExpress, color: '#E7E7E7' },
+  { Icon: SiRedux, color: '#764ABC' },
+  { Icon: SiNextdotjs, color: '#FFFFFF' },
   { Icon: SiTailwindcss, color: '#38BDF8' },
+  { Icon: SiMui, color: '#007FFF' },
+  { Icon: TbBrandOpenai, color: '#10A37F' },
+  { Icon: SiMongodb, color: '#47A248' },
+  { Icon: SiMysql, color: '#4479A1' },
   { Icon: FaGitAlt, color: '#F1502F' },
-  { Icon: SiMysql, color: '#4479A1' },          // MySQL
-  { Icon: FaPython, color: '#3776AB' },         // Python / AI (FaPython use kiya hai)
-  { Icon: SiVuedotjs, color: '#4FC08D' },       // Vue.js
-  { Icon: SiJavascript, color: '#F7DF1E' },     // JavaScript
-  { Icon: SiRedis, color: '#DC382D' },          // Redis (System Design)
-  { Icon: SiSocketdotio, color: '#010101' },    // Socket.IO
-  { Icon: SiCapacitor, color: '#119EFF' },      // Capacitor (Mobile)
-];
+]
 
 function OrbitingIcons() {
   return (
@@ -91,8 +86,18 @@ function OrbitingIcons() {
       <div className="absolute inset-0 rounded-full border border-border" />
       <div className="absolute inset-8 rounded-full border border-border" />
       <div className="absolute inset-0 flex items-center justify-center">
-        <div className="glass-card w-32 h-32 md:w-40 md:h-40 rounded-full flex items-center justify-center shadow-glow">
-          <span className="font-display text-3xl md:text-4xl font-bold gradient-text">VC</span>
+        <div className="glass-card w-32 h-32 md:w-40 md:h-40 rounded-full flex items-center justify-center shadow-glow overflow-hidden p-1 border border-white/20">
+          {personalInfo.avatar ? (
+            <img
+              src={personalInfo.avatar}
+              alt={personalInfo.fullName}
+              className="w-full h-full object-cover rounded-full"
+            />
+          ) : (
+            <span className="font-display text-3xl md:text-4xl font-bold gradient-text">
+              {personalInfo.initials || 'GC'}
+            </span>
+          )}
         </div>
       </div>
       {orbitIcons.map(({ Icon, color }, i) => {
@@ -104,7 +109,7 @@ function OrbitingIcons() {
           <motion.div
             key={i}
             className="absolute w-11 h-11 md:w-14 md:h-14 -translate-x-1/2 -translate-y-1/2 glass-card flex items-center justify-center animate-float"
-            style={{ left: `${x}%`, top: `${y}%`, animationDelay: `${i * 0.5}s` }}
+            style={{ left: `${x}%`, top: `${y}%`, animationDelay: `${i * 0.4}s` }}
           >
             <Icon size={22} color={color} />
           </motion.div>
@@ -171,17 +176,27 @@ export default function Hero() {
           >
             <a
               href="#projects"
-              onClick={(e) => { e.preventDefault(); document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' }) }}
+              onClick={(e) => {
+                e.preventDefault()
+                document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' })
+              }}
               className="btn-primary"
             >
               View Projects <ArrowRight size={16} />
             </a>
-            <a href={personalInfo.resumeLink} download className="btn-outline">
+            <a
+              href={personalInfo.resumeLink}
+              download="Ganesh_Chaurasiya_Resume.pdf"
+              className="btn-outline"
+            >
               <Download size={16} /> Download Resume
             </a>
             <a
               href="#contact"
-              onClick={(e) => { e.preventDefault(); document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' }) }}
+              onClick={(e) => {
+                e.preventDefault()
+                document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })
+              }}
               className="btn-outline"
             >
               Hire Me

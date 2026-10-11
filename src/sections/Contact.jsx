@@ -1,15 +1,16 @@
 import { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Mail, MapPin, Github, Linkedin, CheckCircle2, Loader2, Send } from 'lucide-react'
+import { Mail, Phone, MapPin, Github, Linkedin, CheckCircle2, Loader2, Send } from 'lucide-react'
 import { personalInfo, socialLinks, emailjsConfig } from '../data/portfolioData'
 import Reveal from '../components/Reveal'
 import SectionHeading from '../components/SectionHeading'
 
 const contactCards = [
   { icon: Mail, label: 'Email', value: personalInfo.email, href: `mailto:${personalInfo.email}` },
-  { icon: Github, label: 'GitHub', value: 'View profile', href: socialLinks.github },
-  { icon: Linkedin, label: 'LinkedIn', value: 'Connect', href: socialLinks.linkedin },
+  { icon: Phone, label: 'Phone', value: personalInfo.phone, href: `tel:${personalInfo.phone}` },
+  { icon: Github, label: 'GitHub', value: 'mrganesh665', href: socialLinks.github },
+  { icon: Linkedin, label: 'LinkedIn', value: 'Connect on LinkedIn', href: socialLinks.linkedin },
   { icon: MapPin, label: 'Location', value: personalInfo.location, href: null },
 ]
 

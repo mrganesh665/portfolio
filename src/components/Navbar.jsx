@@ -72,7 +72,7 @@ export default function Navbar() {
           </nav>
 
           <div className="hidden md:flex items-center gap-3">
-            <a href={personalInfo.resumeLink} download className="btn-outline !py-2 !px-4 text-sm">
+            <a href={personalInfo.resumeLink} download="Ganesh_Chaurasiya_Resume.pdf" className="btn-outline !py-2 !px-4 text-sm">
               <Download size={15} /> Resume
             </a>
             <a
@@ -114,7 +114,7 @@ export default function Navbar() {
                 </a>
               ))}
               <div className="flex gap-3 mt-2 px-4">
-                <a href={personalInfo.resumeLink} download className="btn-outline flex-1 !py-2 text-sm">
+                <a href={personalInfo.resumeLink} download="Ganesh_Chaurasiya_Resume.pdf" className="btn-outline flex-1 !py-2 text-sm">
                   Resume
                 </a>
                 <a href="#contact" onClick={(e) => { e.preventDefault(); handleNavClick('#contact') }} className="btn-primary flex-1 !py-2 text-sm">

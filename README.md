@@ -1,21 +1,12 @@
-# Vishnu — Full Stack MERN Developer Portfolio
+# Ganesh Chaurasiya — Software Developer & Full Stack Portfolio
 
-[![Live Demo](https://img.shields.io/badge/Live_Demo-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vishnu-portfolio-topaz.vercel.app/)
 [![Built with Vite](https://img.shields.io/badge/Built_with-Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=white)](https://reactjs.org/)
 
-A premium, animated developer portfolio built with **React 19-style hooks (React 18 runtime), Vite, Tailwind CSS, Framer Motion, Lenis, and EmailJS**.
+A modern, high-performance developer portfolio for **Ganesh Chaurasiya**, built with **React, Vite, Tailwind CSS, Framer Motion, Lenis, and Lucide React**.
 
-> **Live URL:** [https://vishnu-portfolio-topaz.vercel.app/](https://vishnu-portfolio-topaz.vercel.app/)
-
-Dark glass theme · Aurora gradient background · Scroll-reveal animations · Config-driven content · Mobile responsive.
-
----
-
-## ✨ Live Demo
-
-🚀 Check out the live version here:  
-**[https://vishnu-portfolio-topaz.vercel.app/](https://vishnu-portfolio-topaz.vercel.app/)**
+Dark glass theme · Aurora gradient background · Dynamic tech orbit · Real resume download · Mobile responsive.
 
 ---
 
@@ -23,56 +14,39 @@ Dark glass theme · Aurora gradient background · Scroll-reveal animations · Co
 
 | Category | Technologies |
 | :--- | :--- |
-| **Frontend Framework** | React 18 (Vite) |
-| **Styling** | Tailwind CSS, CSS3 |
+| **Frontend Framework** | React 18, TypeScript, Vite |
+| **Styling** | Tailwind CSS, CSS3, Modern Glassmorphism |
 | **Animations** | Framer Motion, Lenis (Smooth Scroll) |
-| **Icons** | Lucide React, React Icons (Fa, Si) |
+| **Icons** | Lucide React, React Icons (Fa, Si, Tb) |
 | **Forms & Email** | EmailJS (Contact Form) |
-| **Deployment** | Vercel |
+| **Resume & Media** | Embedded CV Download, Profile Asset |
 
 ---
 
 ## ✨ Features
 
-- ✅ **Fully Responsive** – Looks perfect on mobile, tablet, and desktop.
-- ✅ **Dark Glass-Morphism UI** – Modern frosted glass aesthetic with blur effects.
-- ✅ **Aurora Gradient Background** – Dynamic animated gradient for a premium feel.
-- ✅ **Smooth Scrolling** – Lenis-powered smooth scroll with inertia.
-- ✅ **Scroll-Reveal Animations** – Elements fade and slide in as you scroll using Framer Motion.
-- ✅ **Typing Effect** – Dynamic role rotation in the Hero section.
-- ✅ **Orbiting Tech Icons** – Animated 3D-style orbit showcasing core skills.
-- ✅ **Config-Driven Content** – Edit `src/data/portfolioData.js` to update all text, stats, projects, and social links without touching the JSX.
-- ✅ **Contact Form** – Fully functional contact form powered by EmailJS.
-- ✅ **Performance Optimized** – Lightweight, fast loading, and SEO-friendly.
-
+- ✅ **Fully Responsive** – Looks crisp across mobile, tablet, and desktop devices.
+- ✅ **Dark Glassmorphism UI** – Frosted glass layers with subtle glowing borders.
+- ✅ **Dynamic Tech Orbit** – Interactive orbiting icons (React, TypeScript, Node, Redux, Next.js, OpenAI, MongoDB, etc.).
+- ✅ **Real Resume Download** – Integrated direct download for `Ganesh_Resume.pdf`.
+- ✅ **Credentials & Achievements** – Dedicated section highlighting HackerRank certification, Mastercard Cybersecurity program, and T&P / IIC leadership.
+- ✅ **Interactive Projects Showcase** – Filterable categories (MERN, AI, Full Stack, React) featuring Study Orbit, RAG Document Retrieval Q&A, and EasyWeds.
+- ✅ **Config-Driven Architecture** – Easily adjust content through `src/data/portfolioData.js`.
 
 ---
 
-## ⚙️ Configuration (Update Content Easily)
+## 🛠️ Getting Started
 
-All the portfolio content is managed via a single configuration file.  
-To update your personal info, projects, skills, and stats, simply edit:
+```bash
+# Clone the repository
+git clone https://github.com/v662-coder/Vishnu_Portfolio.git
 
-📁 **`src/data/portfolioData.js`**
+# Install dependencies
+npm install
 
-Inside this file, you'll find the following sections:
+# Start development server
+npm run dev
 
-| Object | Description |
-| :--- | :--- |
-| `personalInfo` | Name, bio, roles, availability, resume link, social links |
-| `stats` | Years of experience, projects shipped, etc. |
-| `projects` | Array of project objects (title, tech stack, features, links) |
-| `skillCategories` | Categorized skills with proficiency levels (Frontend, Backend, etc.) |
-
-> 💡 *No need to touch any JSX files to update text — just change the data file!*
-
----
-
-## 🔐 Environment Variables (EmailJS Setup)
-
-To make the contact form work, you need to create a `.env` file in the root directory and add your EmailJS credentials:
-
-```env
-VITE_EMAILJS_SERVICE_ID=your_service_id
-VITE_EMAILJS_TEMPLATE_ID=your_template_id
-VITE_EMAILJS_PUBLIC_KEY=your_public_key
+# Build for production
+npm run build
+```
